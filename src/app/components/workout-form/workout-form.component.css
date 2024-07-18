@@ -39,3 +39,22 @@ form input, select{
 .desc img{
     object-fit: cover;
 }
+
+@media (max-width: 536px){
+    .header-img{
+        height: 100px;
+    }
+    .header-img h1{
+        font-size: 15px;
+    }
+    .formflex{
+        flex-direction: column;
+        padding: 0;
+    }
+    .form-container{
+        width: 90%;
+    }
+    .desc{
+        width: 90%;
+    }
+}

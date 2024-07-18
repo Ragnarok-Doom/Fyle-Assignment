@@ -2,3 +2,12 @@ tbody tr:hover{
     background-color: rgb(103, 61, 255);
     color: white;
 }
+@media (max-width: 536px){
+    .prev-btn{
+        justify-content: center;
+    }
+    table{
+        padding: 0;
+        width: 200px;
+    }
+}
