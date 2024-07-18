@@ -1,0 +1,22 @@
+<div class=" p-[50px] w-[100%]">
+    <h2 class="text-2xl font-bold mb-4 text-[25px]">Workout Chart</h2>
+  
+    <div class="flex items-center justify-center gap-[100px] w-[100%] flex-wrap">
+
+      <!-- User List -->
+      <div class="w-[30%]">
+        <div *ngFor="let user of users" class="border p-2 cursor-pointer hover:bg-gray-100" (click)="onSelectUser(user.id)">
+          {{ user.name }}
+        </div>
+      </div>
+      
+      <!-- Workout Chart -->
+      <div class="mt-4">
+        <!-- <h3 *ngIf="selectedUserName" class="text-lg font-bold mb-2">Workout Chart for {{ selectedUserName }}</h3> -->
+        <canvas id="workoutChart" width="400" height="400"></canvas>
+        <p *ngIf="!chart && selectedUserId !== null">{{ noWorkoutDataMessage }}</p>
+      </div>
+
+    </div>
+</div>
+  

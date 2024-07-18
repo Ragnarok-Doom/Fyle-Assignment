@@ -1,0 +1,72 @@
+<div class="p-[20px] m-auto">
+    <div class="header-img w-full flex items-center justify-center h-48 overflow-hidden rounded-[30px] bg-black">
+      <img src="https://cdn.oxygenmag.com/wp-content/uploads/2021/12/Deadlift.jpg?width=1200" alt="image" class="bg-black w-full mt-[300px]">
+      <h1>HEALTH CHALLENGE TRACKER</h1>
+    </div>
+  </div>
+  
+  <div class="flex justify-center gap-[50px] items-center w-full flex-wrap">
+  <div class="p-6 max-w-md  bg-white shadow-lg rounded-lg w-[50%]">
+    <div class="form-title flex w-full h-fit items-center justify-center relative">
+      <h1>add user</h1>
+      <hr>
+    </div>
+      <form (ngSubmit)="onSubmit()" ngNativeValidate>
+        <div class="mb-4">
+          <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            [(ngModel)]="userName"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
+            maxlength="40"
+            oninput="this.value = this.value.replace(/[^A-Za-z ]/g, '').replace(/^ /, '')"
+            required
+          />
+        </div>
+        
+        <div class="mb-4">
+          <label for="workoutType" class="block text-gray-700 text-sm font-bold mb-2">Workout Type</label>
+          <select 
+            id="workoutType" 
+            name="workoutType" 
+            [(ngModel)]="workoutType" 
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            
+            required
+          >
+            <option value="" disabled selected> --- Select Workout Type --- </option>
+            <option *ngFor="let type of workoutTypes" [value]="type">{{ type }}</option>
+          </select>
+        </div>
+        
+        <div class="mb-4">
+          <label for="workoutMinutes" class="block text-gray-700 text-sm font-bold mb-2">Workout Minutes</label>
+          <input 
+            type="text" 
+            id="workoutMinutes" 
+            name="workoutMinutes" 
+            [(ngModel)]="workoutMinutes"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
+            maxlength="3"
+            oninput="this.value = this.value.replace(/\D/g, '')"
+            required
+          />
+        </div>
+        
+        <button 
+          type="submit"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        >
+          Add Workout
+        </button>
+      </form>
+  
+    </div>
+  
+    <div class="desc w-[30%] h-[530px] rounded-[30px] overflow-hidden bg-black">
+      <img src="https://c8.alamy.com/comp/2BG0F3F/sports-and-healthy-life-vector-business-infographic-with-sport-person-characters-charts-and-diagrams-illustration-of-fitness-exercise-chart-informa-2BG0F3F.jpg"  alt="">
+    </div>
+  </div>
+  

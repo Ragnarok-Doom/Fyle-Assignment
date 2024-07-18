@@ -1,0 +1,41 @@
+.header-img img{
+    opacity: 0.3;
+}
+.header-img h1{
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.form-title{
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 800;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px 0 30px 0;
+}
+.form-title h1{
+    background-color: rgb(255, 255, 255);
+    padding: 0 10px;
+    z-index: 1;
+}
+.form-title hr{
+    width: 90%;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+}
+form label{
+    font-size: 17px;
+    margin: 20px 0;
+}
+form input, select{
+    padding: 20px 10px;
+}
+.desc{
+    object-fit: contain;
+}
+.desc img{
+    object-fit: cover;
+}
