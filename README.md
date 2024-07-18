@@ -1,3 +1,7 @@
+Live Url for the application - https://fyle-assignment-orpin.vercel.app/
+
+
+
 *************Angular User Workout Tracking Application****************
 > This project is an Angular application designed to track user workouts. It includes functionalities for user management, workout tracking, and data visualization using charts.
 
